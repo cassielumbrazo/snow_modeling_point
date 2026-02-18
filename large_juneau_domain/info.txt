@@ -1,0 +1,47 @@
+_________________________________________________________________
+"Large Juneau Domain" Info Text 
+_________________________________________________________________
+_________________________________________________________________
+Bounding Box 
+_________________________________________________________________
+
+WGS84 Bounding Box for the "Large Juneau Domain" in WGS84 (EPSG:4326)
+bbox = -135.0734:-134.0303 58.1539:58.8081
+
+which covers all of the 4 sites below, with a 4 x 3km buffer around each 
+
+_________________________________________________________________
+DEM
+_________________________________________________________________
+
+UTM Zone 8N is common for SE Alaska → EPSG:32608 (in meters)
+
+> dem_2m_UTM_clip_large_juneau_domain.tif 
+
+clipped to the same bounding box as above, checked = no nan
+
+
+_________________________________________________________________
+4 Point Modeling Sites 
+_________________________________________________________________
+
+Site Names 
+ppsa2: Powder Patch Eaglecrest Meteorological Station (PPSA2)
+tram: Mount Roberts Tram - Juneau, AK (JTMA2)
+heen: Heen Latinee SNOTEL (SNOTEL # 1270) 
+tkg4: Juneau Ice Field (JIF) Site TKG4 on the Taku Glacier (Lemon Creek Glacier)
+
+Site Data
+lat/lon in WGS84 (EPSG:4326), elevation in meters 
+lat_ppsa2, lon_ppsa2, elevation_ppsa2 = 58.26200, -134.51700, 670
+lat_tram, lon_tram, elevation_tram = 58.2971, -134.386, 529
+lat_heen, lon_heen, elevation_heen = 58.69652, -134.86448, 548
+lat_tkg4, lon_tkg4, elevation_tkg4 = 58.63447,-134.23708, 1120
+
+URLs
+ppsa: https://www.weather.gov/wrh/timeseries?site=PPSA2
+tram: https://www.weather.gov/wrh/timeseries?site=JTMA2
+heen: https://wcc.sc.egov.usda.gov/nwcc/site?sitenum=1270
+
+_________________________________________________________________
+
