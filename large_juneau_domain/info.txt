@@ -1,7 +1,7 @@
+LARGE JUNEAU DOMAIN INFO.TXT
+
 _________________________________________________________________
-"Large Juneau Domain" Info Text 
-_________________________________________________________________
-_________________________________________________________________
+
 Bounding Box 
 _________________________________________________________________
 
@@ -11,6 +11,7 @@ bbox = -135.0734:-134.0303 58.1539:58.8081
 which covers all of the 4 sites below, with a 4 x 3km buffer around each 
 
 _________________________________________________________________
+
 DEM
 _________________________________________________________________
 
@@ -22,7 +23,8 @@ clipped to the same bounding box as above, checked = no nan
 
 
 _________________________________________________________________
-4 Point Modeling Sites 
+
+Point Modeling Sites 
 _________________________________________________________________
 
 Site Names 
@@ -32,16 +34,57 @@ heen: Heen Latinee SNOTEL (SNOTEL # 1270)
 tkg4: Juneau Ice Field (JIF) Site TKG4 on the Taku Glacier (Lemon Creek Glacier)
 
 Site Data
-lat/lon in WGS84 (EPSG:4326), elevation in meters 
+WGS84 lat/lon (EPSG:4326), elevation in meters 
 lat_ppsa2, lon_ppsa2, elevation_ppsa2 = 58.26200, -134.51700, 670
 lat_tram, lon_tram, elevation_tram = 58.2971, -134.386, 529
 lat_heen, lon_heen, elevation_heen = 58.69652, -134.86448, 548
 lat_tkg4, lon_tkg4, elevation_tkg4 = 58.63447,-134.23708, 1120
 
+| Site         | latitude    | Longitude     | Elevation (m) |
+| ------------ | ----------- | ------------- | ------------- |
+| ppsa2        | 58.26200    | -134.51700    | 670           |
+| tram         | 58.2971     | -134.386      | 529           |
+| heen         | 509,980     | -134.86448    | 548           |
+| tkg4         | 58.69652    | -134.23708    | 1120          |
+
 URLs
 ppsa: https://www.weather.gov/wrh/timeseries?site=PPSA2
 tram: https://www.weather.gov/wrh/timeseries?site=JTMA2
 heen: https://wcc.sc.egov.usda.gov/nwcc/site?sitenum=1270
+tkg4: no website directly, but the 
+
+Site Data 
+UTM Zone 8N (EPSG:32608) in meters (easting, northing)
+| Site         | Easting (m) | Northing (m)  | Elevation (m) |
+| ------------ | ----------- | ------------- | ------------- |
+| ppsa2        | 526,210     | 6,453,720     | 670           |
+| tram         | 533,760     | 6,457,610     | 529           |
+| heen         | 509,980     | 6,500,850     | 548           |
+| tkg4         | 545,480     | 6,493,870     | 1120          |
+
 
 _________________________________________________________________
 
+Coordinate Systems Notes 
+_________________________________________________________________
+
+
+WGS84 (EPSG:4326)
+- Units: degrees (latitude, longitude)
+- Used for site locations and bounding boxes
+- Grid cells are not equal size in meters
+
+UTM Zone 8N (EPSG:32608)
+- Units: meters (easting, northing)
+- Used for the DEM
+- Grid cells are uniform in meters
+- The 2 m DEM has true 2 m × 2 m cells
+
+Both systems use the same WGS84 datum. 
+Lat/lon is used for geographic reference, 
+while UTM is used for terrain analysis and modeling.
+
+| System        | EPSG  | Units   | Equal-distance grid  |
+| ------------- | ----- | ------- | -------------------- |
+| WGS84 lat/lon | 4326  | degrees | No                   |
+| UTM Zone 8N   | 32608 | meters  | Yes (locally)        |
