@@ -51,7 +51,7 @@ URLs
 ppsa: https://www.weather.gov/wrh/timeseries?site=PPSA2
 tram: https://www.weather.gov/wrh/timeseries?site=JTMA2
 heen: https://wcc.sc.egov.usda.gov/nwcc/site?sitenum=1270
-tkg4: no website directly, but the 
+tkg4: no website directly
 
 Site Data 
 UTM Zone 8N (EPSG:32608) in meters (easting, northing)
