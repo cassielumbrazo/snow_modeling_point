@@ -1,5 +1,5 @@
-# snow_model_forcing
-
-* scripts to download hrrr and hrrr-ak data
-* scripts to work with full datasets, view data variables
-* eventually, qa/qc and move to netcdf to create forcing
+# snow_modeling_point
+Scripts to set-up point based snow model simulations including, 
+* Processing HRRR-AK grib files into netcdfs 
+* Creating SNOWPACK and Snow-17 forcing data files
+* Reading point simulation output and compare with observations 
