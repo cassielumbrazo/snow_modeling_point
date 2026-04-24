@@ -1,6 +1,6 @@
 HRRR-AK ReadMe Notes 
 
-We have a working .sh script named "download_hrrrak_final_fixed_date_and_foreecast.sh" which required some specific changes from the HRRR-CONUS download script.
+We have a working .sh script named "download_hrrrak_final_fixed_date_and_forecast.sh" which required some specific changes from the HRRR-CONUS download script.
 
 The AK domain gets run every 3 hours, with hourly forecast time
 
