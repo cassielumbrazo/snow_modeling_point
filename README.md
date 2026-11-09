@@ -7,7 +7,8 @@ Scripts to set-up point based snow model simulations including,
 ## Repository organization
 
 - `icefield_domain/`, `large_juneau_domain/`, and `small_juneau_domain/`: domain-specific processing notebooks and scripts.
-- `sites/`: site-specific forcing and simulation analysis.
+- `sites/`: individual site folders for forcing and simulation analysis.
+- `sites/all_sites/`: shared notebooks comparing forcing, snow-model output, soil effects, figures, and tables across sites.
 - `examples/`: model test cases and examples.
 - `figures/`: exported figures.
 - `previous_scripts/`: earlier notebooks, download scripts, and related notes previously stored in the repository root, retained for reference.

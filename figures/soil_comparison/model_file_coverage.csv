@@ -1,0 +1,13 @@
+site,forcing,experiment,file,start_UTC,end_UTC,hourly_records,HS_raw_to_cm
+ppsa,hrrr,base,hrrrak_lapserate_ppsa_WY2020-WY2025_base.smet,2019-10-01 05:00:00,2025-09-01 00:00:00,51884,1.0
+ppsa,hrrr,soil,hrrrak_lapserate_ppsa_WY2020-WY2025_soil.smet,2019-10-01 06:00:00,2025-09-01 00:00:00,51883,1.0
+ppsa,mixed,base,met_hrrrak_lapserate_ppsa_WY2020-WY2025_base.smet,2019-10-01 06:00:00,2025-09-01 00:00:00,51883,1.0
+ppsa,mixed,soil,met_hrrrak_lapserate_ppsa_WY2020-WY2025_soil.smet,2019-10-01 06:00:00,2025-09-01 00:00:00,51883,1.0
+tram,hrrr,base,hrrrak_lapserate_tram_WY2020-WY2025_base.smet,2019-10-01 05:00:00,2025-09-01 00:00:00,51884,1.0
+tram,hrrr,soil,hrrrak_lapserate_tram_WY2020-WY2025_soil.smet,2019-10-01 06:00:00,2025-09-01 00:00:00,51883,1.0
+tram,mixed,base,met_hrrrak_lapserate_tram_WY2023-WY2025_base.smet,2022-10-01 06:00:00,2025-09-01 00:00:00,25579,1.0
+tram,mixed,soil,met_hrrrak_lapserate_tram_WY2023-WY2025_soil.smet,2022-10-01 06:00:00,2025-09-01 00:00:00,25579,1.0
+heen,hrrr,base,hrrrak_lapserate_heen_WY2020-WY2025_base.smet,2019-10-01 06:00:00,2025-09-01 00:00:00,51883,1.0
+heen,hrrr,soil,hrrrak_lapserate_heen_WY2020-WY2025_soil.smet,2019-10-01 06:00:00,2025-09-01 00:00:00,51883,1.0
+heen,mixed,base,met_hrrrak_lapserate_heen_WY2020-WY2022_base.smet,2019-10-01 06:00:00,2022-09-30 05:00:00,26280,1.0
+heen,mixed,soil,met_hrrrak_lapserate_heen_WY2020-WY2022_soil.smet,2019-10-01 06:00:00,2022-09-30 05:00:00,26280,1.0

@@ -1,0 +1,11 @@
+{
+  "source_notebook": "/home/cassie/python/repos/snow_modeling_point/sites/all_sites/3_read_snowpack_output_compare_all_sites_lapserate_soil_figure.ipynb",
+  "source_notebook_sha256": "6f480b842a99cdaa1ac3e25d82a35c068e1951664fec0836ebfa888997131dac",
+  "snowpack_version": "Snowpack version 3.7.0 compiled on Apr 29 2024 14:06:49\n\tLibsnowpack 3.7.0 compiled on Apr 29 2024 14:04:24\n\tMeteoIO 2.11.0 compiled on Apr 26 2024 14:12:50",
+  "python": "3.11.7 (main, Dec 15 2023, 18:12:31) [GCC 11.2.0]",
+  "pandas": "2.1.4",
+  "numpy": "1.26.4",
+  "spring_window": "(Mar 1 00:00, Sep 1 00:00] UTC",
+  "area": "horizontal projected",
+  "interval_hours": 1
+}
