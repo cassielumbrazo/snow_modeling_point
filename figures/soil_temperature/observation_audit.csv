@@ -1,0 +1,4 @@
+site,path,variables,soil_variables
+ppsa,/hdd/snow_hydrology/met_station/ppsa2/pppsa_met_station_data_synoptic_2026-03-20,temp;rh;hs;precip_accum;precip_rate;precip_accum_1hr,
+tram,/hdd/snow_hydrology/met_station/tram/tram_met_station_data_synoptic_2026-03-20,temp;rh;hs;solar_rad;precip_accum;precip_accum_1hr;precip_rate;precip_accum_corrected_met,
+heen,/hdd/snow_hydrology/met_station/snotel/heenlatinee/heen_met_2016_2026_cleaned_v1.nc,swe;temp;hs;rh;precip_accum;wind;wind_dir;pressure;precip_rate;precip_accum_1hr,
