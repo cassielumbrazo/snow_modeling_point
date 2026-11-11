@@ -1,0 +1,5 @@
+# Local research outputs, caches, copied inputs, and export bundles.
+/temporary/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
