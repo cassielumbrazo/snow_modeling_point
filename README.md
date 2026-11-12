@@ -60,3 +60,72 @@ existing sensitivity products. Completion status files check matching hourly
 coverage and preserved original inputs/controls. The notebook displays plots
 and tables inline; generated diagnostics, if exported, belong in ignored
 `temporary/soil_thresh07/`.
+
+
+## Base precipitation-threshold sensitivity (soil disabled)
+
+[`sites/all_sites/6_compare_snowpack_base_thresh07.ipynb`](sites/all_sites/6_compare_snowpack_base_thresh07.ipynb)
+compares `base` (+1.2°C), `base_thresh10` (+1.0°C), and `base_thresh07`
+(+0.7°C) for PPSA, TRAM, and HEEN with both lapse-rate forcing datasets.
+The notebook retains its filename and the same comparison windows listed above.
+Solid, dotted, and dashed styles distinguish the three thresholds. Seasonal
+statistics compare each sensitivity with the shared control and include a direct
+three-threshold table; baseline seasons are counted once in that table.
+
+All experiments preserve `SNP_SOIL = false`, `SOIL_FLUX = false`,
+`GEO_HEAT = 0.06`, zero-layer initial profiles, and the constant 273.15 K
+ground-temperature generator. Phase partitioning uses the working MeteoIO
+`Generators` syntax: `PRECSPLITTING`, `THRESH`, with `snow = 274.15`
+for +1.0°C or `273.85` for +0.7°C. Other active settings are preserved.
+
+Each sensitivity has six configs named
+`<forcing>_<experiment>_<site>_<period>.ini` in the existing model site's
+`config/` directory, outputs ending in `_<experiment>.*`, a matching
+`<experiment>_runs.json` manifest, and `run_<experiment>.sh` site script.
+Original outputs and inputs are preserved. For a fresh +1.0°C setup:
+
+```bash
+python sites/all_sites/_base_threshold_sensitivity.py prepare --experiment base_thresh10
+python sites/all_sites/_base_threshold_sensitivity.py run --experiment base_thresh10 --workers 6 --empty-column-guard-sites tram
+```
+
+Use `--experiment base_thresh07` for +0.7°C (also the default). Run with the
+`jif_snow_modeling` environment. Existing sensitivity products are protected
+against overwriting. Use the Python run command above for TRAM so the guard
+is enabled; the simple site shell scripts invoke SNOWPACK directly.
+
+The TRAM sensitivity runs use the build-specific empty-column vapor-transport
+guard described in `sites/all_sites/numerics/README.md`; status records include
+its command and application count. The +0.7°C retries matched all pre-crash
+HS, SWE, rainfall, and snowfall values. The shared comparison omits the extra
+05:00 control initialization record at PPSA/TRAM HRRR (new runs start at their
+profile date, 06:00); displayed years are unaffected.
+
+The notebook displays plots and tables inline without automatic figure exports.
+Optional diagnostic artifacts belong in ignored `temporary/base_thresh10/` or
+`temporary/base_thresh07/`.
+
+
+## Small-domain forecast-hour comparison
+
+[`small_juneau_domain/3_compare_hrrrak_forecast_hours_ppsa.ipynb`](small_juneau_domain/3_compare_hrrrak_forecast_hours_ppsa.ipynb)
+compares the processed native-grid `f123`, `f567`, `f6to11`, and
+`f6to29` mosaics for the available WY2024/WY2025 periods at the grid cell nearest
+PPSA. It includes eight inline figures: lead schedules, daily forcing overviews,
+hourly storm windows, f6to11-minus-f567 differences, PPSA temperature/RH checks,
+and precipitation totals on common observed hours. Settings expose point
+coordinates, colors, windows, and the optional temperature lapse rate.
+
+The audit uses stored valid times and forecast leads. The WY2025 file labeled
+`f678` actually contains leads 5–7; it is flagged in the inventory and excluded from all plots and comparison
+statistics. The older WY2025 f567 test subset matches the selected later version at
+the extracted point and is excluded from plots. Cropped/reprojected test files
+are not counted as separate forecast options.
+
+PPSA validation uses the raw Synoptic CSV: exact hourly temperature/RH and gauge
+increments with gaps/resets retained as missing. HRRR precipitation follows the
+existing forcing convention of instantaneous `precip_rate * 3600`, explicitly
+labeled as an estimated hourly amount. Statistics use common valid timestamps;
+totals are matched-hour sums, not complete water-year totals. Native wind
+direction is grid-relative. Run with the JIF kernel; source datasets remain
+read-only. Diagnostics belong in ignored `temporary/forecast_comparison/`.
